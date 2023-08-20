@@ -1,6 +1,7 @@
 const carousel = document.querySelector('.best-deals-carousel');
 const arrowButtons = document.querySelectorAll('.carousel-card-button i');
 const firstCardWidth = carousel.querySelector('.best-deals-card').offsetWidth;
+const CAROUSEL_GRID_GAP = 16;
 
 let isDragging = false;
 let startX = null;
@@ -8,11 +9,10 @@ let startScrollLeft = null;
 
 arrowButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    if (button.id === 'card-button-left') {
-      // TODO: 用id才能運作，用class會變成只能單方向移動，且這個class要與跌class分開才會有效果，但是i的箭頭會不見
-      carousel.scrollLeft -= firstCardWidth + 16; // TODO: 如何連動scss第272的gap屬性
+    if (button.className.includes('card-button-left')) {
+      carousel.scrollLeft -= firstCardWidth + CAROUSEL_GRID_GAP; // TODO: 如何連動scss第272的gap屬性
     } else {
-      carousel.scrollLeft += firstCardWidth + 16; // TODO: 如何連動scss第272的gap屬性
+      carousel.scrollLeft += firstCardWidth + CAROUSEL_GRID_GAP; // TODO: 如何連動scss第272的gap屬性
     }
   });
 });
