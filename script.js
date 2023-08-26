@@ -1,18 +1,17 @@
-const carousel = document.querySelector('.best-deals-carousel');
+const carousel = document.querySelector('.item-cards-carousel');
 const arrowButtons = document.querySelectorAll('.carousel-card-button i');
-const firstCardWidth = carousel.querySelector('.best-deals-card').offsetWidth;
-const CAROUSEL_GRID_GAP = 16;
+const cardWidth = carousel.querySelector('.item-card').offsetWidth;
 
 let isDragging = false;
-let startX = null;
-let startScrollLeft = null;
+let startX = 0;
+let startScrollLeft = 0;
 
 arrowButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    if (button.className.includes('card-button-left')) {
-      carousel.scrollLeft -= firstCardWidth + CAROUSEL_GRID_GAP; // TODO: 如何連動scss第272的gap屬性
-    } else {
-      carousel.scrollLeft += firstCardWidth + CAROUSEL_GRID_GAP; // TODO: 如何連動scss第272的gap屬性
+    if (button.classList.contains('card-button-left')) {
+      carousel.scrollLeft -= cardWidth;
+    } else if (button.classList.contains('card-button-right')) {
+      carousel.scrollLeft += cardWidth;
     }
   });
 });
