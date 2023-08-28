@@ -11,70 +11,75 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>ShopLocal</title>
   </head>
   <body>
-    <nav>
-      <div class="nav-topbar">
-        <div class="container">
-          <div class="nav-topbar-content">
-            <div class="nav-topbar-phone">
-              <i class="fa-solid fa-phone"></i>
-              <p>+001234567890</p>
-            </div>
-            <div class="nav-topbar-discount">
-              <a href="#">Get 50% Off on Selected Items | Shop Now</a>
-            </div>
-            <div class="nav-topbar-language-location">
-              <select name="language">
-                <option value="en">English</option>
-                <option value="zh-Hant">繁體中文</option>
-                <option value="jp">日本語</option>
-              </select>
-              <select name="location">
-                <option value="taiwan">Taiwan</option>
-                <option value="japan">Japan</option>
-                <option value="korea">Korea</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="nav-bottombar">
-        <div class="container">
-          <div class="nav-bottombar-content">
-            <img src="./image/shop-logo-01.svg" />
-            <ul class="nav-bottom-toolbar">
-              <li class="nav-toolbar-categories">
-                <a href="#">Categories<i class="fa-solid fa-angle-down"></i></a>
-              </li>
-              <a href="#"><li class="nav-toolbar-whatsnew">What's New</li></a>
-            </ul>
-            <form class="nav-bottombar-searchbar">
-              <input type="text" placeholder="Search Product" />
-              <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-            <div class="nav-bottombar-sidebar">
-              <div class="nav-bottombar-account">
-                <a href="#"
-                  ><i class="fa-solid fa-user"></i><span>Account</span></a
-                >
-              </div>
-              <div class="nav-bottombar-cart">
-                <a href="#"
-                  ><i class="fa-solid fa-cart-shopping"
-                    ><div class="cart-number">0</div></i
-                  ><span>Cart</span></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
     <header>
-      <div class="header-background">
+      <nav>
+        <div class="nav-topbar">
+          <div class="container">
+            <div class="nav-topbar-content">
+              <div class="nav-topbar-phone">
+                <i class="fa-solid fa-phone"></i>
+                <p>+001234567890</p>
+              </div>
+              <div class="nav-topbar-discount">
+                <a href="#">Get 50% Off on Selected Items | Shop Now</a>
+              </div>
+              <div class="nav-topbar-language-location">
+                <select name="language">
+                  <option value="en">English</option>
+                  <option value="zh-Hant">繁體中文</option>
+                  <option value="jp">日本語</option>
+                </select>
+                <select name="location">
+                  <option value="taiwan">Taiwan</option>
+                  <option value="japan">Japan</option>
+                  <option value="korea">Korea</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-bottombar">
+          <div class="container">
+            <div class="nav-bottombar-content">
+              <img src="./image/shop-logo-01.svg" />
+              <ul class="nav-bottom-toolbar">
+                <li class="nav-toolbar-categories">
+                  <a href="#"
+                    >Categories<i class="fa-solid fa-angle-down"></i
+                  ></a>
+                </li>
+                <a href="#"><li class="nav-toolbar-whatsnew">What's New</li></a>
+              </ul>
+              <form class="nav-bottombar-searchbar">
+                <input type="text" placeholder="Search Product" />
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
+              <div class="nav-bottombar-sidebar">
+                <div class="nav-bottombar-account">
+                  <a href="#"
+                    ><i class="fa-solid fa-user"></i><span>Account</span></a
+                  >
+                </div>
+                <div class="nav-bottombar-cart">
+                  <a href="#"
+                    ><i class="fa-solid fa-cart-shopping"
+                      ><div class="cart-number">0</div></i
+                    ><span>Cart</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="header-background">
         <div class="container header-container">
           <div class="header-content">
             <div class="header-content-innerbox">
@@ -100,9 +105,7 @@
             />
           </div>
         </div>
-      </div>
-    </header>
-    <main>
+      </section>
       <section class="shop-categories">
         <div class="container">
           <h2 class="section-title">Shop Our Top Categories</h2>
@@ -529,6 +532,128 @@
               <i class="fa-solid fa-angle-right card-button-right"></i>
             </div>
           </div>
+          <div class="item-cards-wrapper">
+            <ul class="item-cards-carousel">
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>the title 1</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>the title 2</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>the title 3</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>the title 4</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>the title 5</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>the title 6</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+            </ul>
+            <div class="carousel-card-button">
+              <i class="fa-solid fa-angle-left card-button-left"></i>
+              <i class="fa-solid fa-angle-right card-button-right"></i>
+            </div>
+          </div>
         </div>
       </section>
       <section class="discount-full-banner">
@@ -666,6 +791,6 @@
         </div>
       </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="./script/script.js"></script>
   </body>
 </html>
