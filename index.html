@@ -1,13 +1,796 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>ShopLocal</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <header>
+      <nav>
+        <div class="nav-topbar">
+          <div class="container">
+            <div class="nav-topbar-content">
+              <div class="nav-topbar-phone">
+                <i class="fa-solid fa-phone"></i>
+                <p>+001234567890</p>
+              </div>
+              <div class="nav-topbar-discount">
+                <a href="#">Get 50% Off on Selected Items | Shop Now</a>
+              </div>
+              <div class="nav-topbar-language-location">
+                <select name="language">
+                  <option value="en">English</option>
+                  <option value="zh-Hant">繁體中文</option>
+                  <option value="jp">日本語</option>
+                </select>
+                <select name="location">
+                  <option value="taiwan">Taiwan</option>
+                  <option value="japan">Japan</option>
+                  <option value="korea">Korea</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-bottombar">
+          <div class="container">
+            <div class="nav-bottombar-content">
+              <img src="./image/shop-logo-01.svg" />
+              <ul class="nav-bottom-toolbar">
+                <li class="nav-toolbar-categories">
+                  <a href="#"
+                    >Categories<i class="fa-solid fa-angle-down"></i
+                  ></a>
+                </li>
+                <a href="#"><li class="nav-toolbar-whatsnew">What's New</li></a>
+              </ul>
+              <form class="nav-bottombar-searchbar">
+                <input type="text" placeholder="Search Product" />
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
+              <div class="nav-bottombar-sidebar">
+                <div class="nav-bottombar-account">
+                  <a href="#"
+                    ><i class="fa-solid fa-user"></i><span>Account</span></a
+                  >
+                </div>
+                <div class="nav-bottombar-cart">
+                  <a href="#"
+                    ><i class="fa-solid fa-cart-shopping"
+                      ><div class="cart-number">0</div></i
+                    ><span>Cart</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="header-background">
+        <div class="container header-container">
+          <div class="header-content">
+            <div class="header-content-innerbox">
+              <h1>
+                Shopping And<br />
+                Department Store.
+              </h1>
+            </div>
+            <div class="header-content-innerbox">
+              <p>
+                Shopping is a bit of a relaxing hobby for me, which is sometimes
+                troubling for the bank balance.
+              </p>
+            </div>
+            <div class="header-content-innerbox">
+              <button class="primary-button">Learn More</button>
+            </div>
+          </div>
+          <div class="header-image">
+            <img
+              src="./image/title-banner-example-01.png"
+              alt="title-banner-1"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="shop-categories">
+        <div class="container">
+          <h2 class="section-title">Shop Our Top Categories</h2>
+          <div class="shop-categories-wrapper">
+            <div class="shop-categories-box">
+              <img src="./image/categories/furniture.jpg" alt="Furniture" />
+              <h3 class="shop-categories-title">Furniture</h3>
+            </div>
+            <div class="shop-categories-box">
+              <img src="./image/categories/hand-bag.jpg" alt="Hand-Bag" />
+              <h3 class="shop-categories-title">Hand Bag</h3>
+            </div>
+            <div class="shop-categories-box">
+              <img src="./image/categories/books.jpg" alt="Books" />
+              <h3 class="shop-categories-title">Books</h3>
+            </div>
+            <div class="shop-categories-box">
+              <img src="./image/categories/tech.jpg" alt="Tech" />
+              <h3 class="shop-categories-title">Tech</h3>
+            </div>
+            <div class="shop-categories-box">
+              <img src="./image/categories/sneaker.jpg" alt="Sneakers" />
+              <h3 class="shop-categories-title">Sneakers</h3>
+            </div>
+            <div class="shop-categories-box">
+              <img src="./image/categories/travel.jpg" alt="Travel" />
+              <h3 class="shop-categories-title">Travel</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="best-deals">
+        <div class="container">
+          <h2 class="section-title">Todays Best Deals For You!</h2>
+          <div class="best-deals-categories-wrapper">
+            <div class="secondary-button button-selected">
+              <p>Top</p>
+            </div>
+            <div class="secondary-button">
+              <p>Coat</p>
+            </div>
+            <div class="secondary-button">
+              <p>Pants</p>
+            </div>
+            <div class="secondary-button">
+              <p>Shoes</p>
+            </div>
+          </div>
+          <div class="best-deals-wrapper">
+            <ul class="best-deals-flexbox">
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>Top 1</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>Top 2</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>Top 3</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>Top 4</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>Top 5</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>Top 6</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="choose-by-brand">
+        <div class="container">
+          <h2 class="section-title">Choose by Brand</h2>
+          <div class="brand-wrapper">
+            <div class="brand-box">
+              <img src="./image/brand/staples.png" alt="Staples logo" />
+              <div class="brand-text">
+                <h4>Staples</h4>
+                <p>Delivery with in 24 hours</p>
+              </div>
+            </div>
+            <div class="brand-box">
+              <img src="./image/brand/sprouts.png" alt="Sprouts logo" />
+              <div class="brand-text">
+                <h4>Sprouts</h4>
+                <p>Delivery with in 24 hours</p>
+              </div>
+            </div>
+            <div class="brand-box">
+              <img
+                src="./image/brand/grocery-outlet.png"
+                alt="Grocery outlet logo"
+              />
+              <div class="brand-text">
+                <h4>Grocery outlet</h4>
+                <p>Delivery with in 24 hours</p>
+              </div>
+            </div>
+            <div class="brand-box">
+              <img
+                src="./image/brand/mollie-stones.png"
+                alt="Mollie stones logo"
+              />
+              <div class="brand-text">
+                <h4>Mollie stones</h4>
+                <p>Delivery with in 24 hours</p>
+              </div>
+            </div>
+            <div class="brand-box">
+              <img
+                src="./image/brand/sports-basement.png"
+                alt="Sports Basement logo"
+              />
+              <div class="brand-text">
+                <h4>Sports Basement</h4>
+                <p>Delivery with in 24 hours</p>
+              </div>
+            </div>
+            <div class="brand-box">
+              <img
+                src="./image/brand/container-store.png"
+                alt="Container Store logo"
+              />
+              <div class="brand-text">
+                <h4>Container Store</h4>
+                <p>Delivery with in 24 hours</p>
+              </div>
+            </div>
+            <div class="brand-box">
+              <img src="./image/brand/target.png" alt="Target logo" />
+              <div class="brand-text">
+                <h4>Target</h4>
+                <p>Delivery with in 24 hours</p>
+              </div>
+            </div>
+            <div class="brand-box">
+              <img src="./image/brand/bevmo.png" alt="Bevmo! logo" />
+              <div class="brand-text">
+                <h4>Bevmo!</h4>
+                <p>Delivery with in 24 hours</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="get-offer">
+        <div class="container">
+          <h2 class="section-title">Get Up To 70% Off</h2>
+          <div class="get-offer-wrapper">
+            <div class="get-offer-box bg-color-yellow">
+              <div class="get-offer-text">
+                <span class="get-off-save">Save</span>
+                <div class="offer-discount font-color-yellow">
+                  <span>$</span>100
+                </div>
+                <p>Explore Our Furniture & Home Furnishing Range</p>
+              </div>
+              <div class="get-off-image-container">
+                <img
+                  src="./image/offer-picture/yellow.png"
+                  alt="Staples logo"
+                />
+              </div>
+            </div>
+            <div class="get-offer-box bg-color-red">
+              <div class="get-offer-text">
+                <span class="get-off-save">Save</span>
+                <div class="offer-discount font-color-red">
+                  <span>$</span>29
+                </div>
+                <p>Explore Our Furniture & Home Furnishing Range</p>
+              </div>
+              <div class="get-off-image-container">
+                <img src="./image/offer-picture/red.png" alt="Staples logo" />
+              </div>
+            </div>
+            <div class="get-offer-box bg-color-brown">
+              <div class="get-offer-text">
+                <span class="get-off-save">Save</span>
+                <div class="offer-discount font-color-brown">
+                  <span>$</span>67
+                </div>
+                <p>Explore Our Furniture & Home Furnishing Range</p>
+              </div>
+              <div class="get-off-image-container">
+                <img src="./image/offer-picture/brown.png" alt="Staples logo" />
+              </div>
+            </div>
+            <div class="get-offer-box bg-color-green">
+              <div class="get-offer-text">
+                <span class="get-off-save">Save</span>
+                <div class="offer-discount font-color-green">
+                  <span>$</span>59
+                </div>
+                <p>Explore Our Furniture & Home Furnishing Range</p>
+              </div>
+              <div class="get-off-image-container">
+                <img src="./image/offer-picture/green.png" alt="Staples logo" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="weekly-popular-products">
+        <div class="container">
+          <h2 class="section-title">Weekly Popular Products</h2>
+          <div class="item-cards-wrapper">
+            <ul class="item-cards-carousel">
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>the title 1</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>the title 2</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>the title 3</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>the title 4</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>the title 5</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>the title 6</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+            </ul>
+            <div class="carousel-card-button">
+              <i class="fa-solid fa-angle-left card-button-left"></i>
+              <i class="fa-solid fa-angle-right card-button-right"></i>
+            </div>
+          </div>
+          <div class="item-cards-wrapper">
+            <ul class="item-cards-carousel">
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>the title 1</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>the title 2</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>the title 3</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>the title 4</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>the title 5</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+              <li class="item-card">
+                <div class="item-card-image item-card-innerbox">
+                  <img src="./image/backup-image.jpg" alt="" />
+                  <div class="card-favorite">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+                <div class="card-title-price item-card-innerbox">
+                  <div class="card-title"><h3>the title 6</h3></div>
+                  <div class="card-price"><span>$99.00</span></div>
+                </div>
+                <p class="card-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Amet, ea?
+                </p>
+                <button class="secondary-button item-card-innerbox">
+                  Add to Cart
+                </button>
+              </li>
+            </ul>
+            <div class="carousel-card-button">
+              <i class="fa-solid fa-angle-left card-button-left"></i>
+              <i class="fa-solid fa-angle-right card-button-right"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="discount-full-banner">
+        <div class="discount-banner-image-container">
+          <img src="./image/discount-banner.png" />
+        </div>
+        <div class="container">
+          <div class="discount-banner-content">
+            <div class="discount-banner-innerbox">
+              <h2>Get 5% Cash Back On $200</h2>
+            </div>
+            <div class="discount-banner-innerbox">
+              <p>
+                Shopping is a bit of a relaxing hobby for me, which is sometimes
+                troubling for the bank balance.
+              </p>
+            </div>
+            <div class="discount-banner-innerbox">
+              <button class="primary-button">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer">
+          <div class="footer-top">
+            <div class="footer-side-info">
+              <img class="footer-logo" src="./image/shop-logo-01.svg" />
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+              </p>
+              <h3>Accepted Payments</h3>
+              <div class="footer-payments">
+                <img
+                  src="./image/payments/payments-icon_mastercard.svg"
+                  alt="Master Card"
+                />
+                <img src="./image/payments/payments-icon_visa.svg" alt="Visa" />
+                <img
+                  src="./image/payments/payments-icon_paypal.svg"
+                  alt="PayPal"
+                />
+                <img src="./image/payments/payments-icon_jcb.svg" alt="JCB" />
+                <img
+                  src="./image/payments/payments-icon_applepay.svg"
+                  alt="Apple Pay"
+                />
+                <img
+                  src="./image/payments/payments-icon_googlepay.svg"
+                  alt="Google Pay"
+                />
+              </div>
+            </div>
+            <div class="footer-department">
+              <h3>Department</h3>
+              <ul>
+                <li><a href="#">Fashion</a></li>
+                <li><a href="#">Education Product</a></li>
+                <li><a href="#">Frozen Food</a></li>
+                <li><a href="#">Beverages</a></li>
+                <li><a href="#">Organic Grocery</a></li>
+                <li><a href="#">Office Supplies</a></li>
+                <li><a href="#">Beauty Products</a></li>
+                <li><a href="#">Books</a></li>
+                <li><a href="#">Travel Accessories</a></li>
+                <li><a href="#">Furniture</a></li>
+              </ul>
+            </div>
+            <div class="footer-about-us">
+              <h3>About Us</h3>
+              <ul>
+                <li><a href="#">About ShopLocal</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">News & Blog </a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Press Center </a></li>
+                <li><a href="#">Shop By Location</a></li>
+                <li><a href="#">Shopcart Brands</a></li>
+                <li><a href="#">Affiliate & Partners</a></li>
+                <li><a href="#">Ideas & Guides</a></li>
+              </ul>
+            </div>
+            <div class="footer-services">
+              <h3>Services</h3>
+              <ul>
+                <li><a href="#">Gift Card</a></li>
+                <li><a href="#">Mobile App</a></li>
+                <li><a href="#">Shipping & Delivery</a></li>
+                <li><a href="#">Order Pickup</a></li>
+                <li><a href="#">Account Signup</a></li>
+              </ul>
+            </div>
+            <div class="footer-help">
+              <h3>Help</h3>
+              <ul>
+                <li><a href="#">Shopcart Help</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Track Orders</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">Security & Fraud</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="footer-bottom-menu">
+              <a href="#">
+                <i class="fa-solid fa-shop"></i>
+                Become Seller
+              </a>
+              <a href="#">
+                <i class="fa-solid fa-gift"></i>
+                Gift Cards
+              </a>
+              <a href="#">
+                <i class="fa-solid fa-circle-info"></i>
+                Help Center
+              </a>
+            </div>
+            <div class="footer-bottom-copyright">
+              <div>
+                <a href="#">Terms of Service</a>
+              </div>
+              <div>
+                <a href="#">Privacy & Policy</a>
+              </div>
+            </div>
+            <div class="footer-bottom-text">
+              <p>Layout by Stanley | 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./script/script.js"></script>
   </body>
 </html>
